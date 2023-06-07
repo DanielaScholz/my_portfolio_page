@@ -1,0 +1,35 @@
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.name-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    div{
+        font-family: 'Overpass';
+        font-weight: 700;
+        font-size: 48px;
+        color: #5988FF;
+    }
+}
+
+.info-box{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 240px;
+    font-family: 'Overpass';
+    font-size: 23px;
+    font-weight: 300;
+}
+
+.email-box{
+    transform-origin: 10px 10px;
+    transform: rotate(-90deg);
+}
+

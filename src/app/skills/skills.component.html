@@ -1,0 +1,12 @@
+<fieldset>
+    <legend>
+        <h2>My skills</h2>
+    </legend>
+
+    <div class="skills-container">
+        <div *ngFor="let skill of skills">
+            <img src="../../assets/img/skills/{{ skill }}.svg" alt="{{ skill }} logo">
+            <span>{{ skill }}</span>
+        </div>
+    </div>
+</fieldset>

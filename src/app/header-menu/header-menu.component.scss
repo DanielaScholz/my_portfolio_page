@@ -1,4 +1,4 @@
-header{
+nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -14,7 +14,10 @@ header{
         font-size: 24px;
         text-decoration: none;
         margin-left: 24px;
-        
+
+        &:hover{
+            color: #5988FF;
+        }
     }
 }
 

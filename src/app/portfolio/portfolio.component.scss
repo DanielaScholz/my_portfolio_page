@@ -1,0 +1,28 @@
+
+.portfolio-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    span{
+        width: 531px;
+    }
+}
+
+
+.project-box{
+    display: flex;
+    flex-direction: column;
+
+    h3{
+        text-align: end;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+    }
+}
+
+.project-screenshoot{
+    width: 620px;
+    height: 394px;
+    object-fit: cover;
+}

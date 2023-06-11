@@ -1,0 +1,33 @@
+footer{
+    background-color: black;
+    color: #FFFCF3;
+
+
+    img{
+        height: 50px;
+    }
+
+    .icons-box{
+        a{
+            margin-left: 50px;
+        }
+    }
+
+    .legal-box{
+        color: #FFFCF3;
+        font-size: 16px;
+
+        &:hover{
+            font-weight: 800;
+        }
+    }
+}
+
+.img-animation{
+    transition: all 225ms ease-in-out;
+
+    &:hover{
+        transform: translateY(-20px);
+
+    }
+}

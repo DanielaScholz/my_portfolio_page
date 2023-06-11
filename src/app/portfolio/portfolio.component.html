@@ -1,9 +1,9 @@
-<div class="portfolio-box">
-    <h2>Portfolio</h2>
+<div class="margin-ri-le">
+    <h2 id="portfolio">Portfolio</h2>
     <span>Feel free to try out my latest development projects and look into their codes..</span>
 </div>
 
-<div class="project-box" *ngFor="let project of projects; let i = index">
+<div class="project-box margin-ri-le"  *ngFor="let project of projects; let i = index">
     <h3>{{ i + 1 }} / {{ projects.length }}</h3>
     <img class="project-screenshoot" src="../../assets/img/portfolio/{{ project }}.PNG"
         alt="screenshoot of {{ project }}">

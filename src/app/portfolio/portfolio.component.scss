@@ -21,6 +21,10 @@
     }
 }
 
+.project-box:nth-of-type(odd){
+    align-items: end;
+}
+
 .project-screenshoot{
     width: 620px;
     height: 394px;

@@ -1,16 +1,17 @@
 <footer>
     <div class="flex margin-ri-le">
-        <img src="../../assets/img/logo/logo-white.png" alt="personal logo">
+        <img class="cursor-pointer" routerLink="/" src="../../assets/img/logo/logo-white.png" alt="personal logo">
     </div>
     <div class="d-flex-center-space-btw margin-ri-le">
         <span> (c) Daniela Scholz 2023</span>
         <div class="icons-box">
-            <!-- <img href="www.google.at" *ngFor="let icon of icons" src="../../assets/img/footer/{{ icon }}.svg" alt="icons of {{ icon }}"> -->
-            <a href="www.google.at" *ngFor="let icon of icons"><img class="img-animation" href="www.google.at" src="../../assets/img/footer/{{ icon }}.svg" alt="icons of {{ icon }}"></a>
+            <a [href]="contacts.url[i]" target="_blank" *ngFor="let icon of contacts.name; let i = index">
+                <img class="img-animation" src="../../assets/img/footer/{{ icon }}.svg" alt="icons of {{ icon }}">
+            </a>
         </div>
     </div>
     <div class="legal-box d-flex-end margin-ri-le">
-        <a href="#">Legal notice</a>
+        <a routerLink="/legal-notice">Legal notice</a>
         <div class="decoration-line"></div>
     </div>
 </footer>

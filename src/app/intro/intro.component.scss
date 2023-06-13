@@ -1,4 +1,4 @@
-header{
+header {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -6,12 +6,12 @@ header{
 }
 
 
-.name-box{
+.name-box {
     display: flex;
     align-items: center;
     justify-content: center;
 
-    div{
+    div {
         font-family: 'Overpass';
         font-weight: 700;
         font-size: 48px;
@@ -19,15 +19,20 @@ header{
     }
 }
 
-.info-box{
+.info-box {
     display: flex;
     justify-content: space-between;
-    margin-top: 240px;
+    margin-top: 100px;
     font-weight: 300;
 }
 
-.email-box{
-    transform-origin: 10px 10px;
+.email-box {
+    transform-origin: 120px 120px;
     transform: rotate(-90deg);
+}
+
+
+.scroll-img {
+    height: auto;
 }
 

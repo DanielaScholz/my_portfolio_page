@@ -82,6 +82,12 @@ a{
      align-items: center;
 }
 
+.d-flex-column-center-center{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+}
+
 .d-flex-end{
      display: flex;
      align-items: center;
@@ -131,6 +137,10 @@ a{
 
 .cream-font{
      color: #FFFCF3;
+}
+
+.cursor-pointer{
+     cursor: pointer;
 }
 
 

@@ -6,6 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent {
-  icons =['Github', 'Email', 'Linkedin'];
+  contacts = {
+    "name": ['Github', 'Linkedin'],
+    "url": ['https://github.com/DanielaScholz', 'https://google.at']
+  };
 
 }

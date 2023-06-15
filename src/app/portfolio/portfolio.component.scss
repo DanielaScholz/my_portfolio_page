@@ -1,28 +1,27 @@
-
-.portfolio-box{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    span{
-        width: 531px;
-    }
-}
-
-
 .project-box{
     display: flex;
     flex-direction: column;
+    mix-blend-mode: luminosity;
+
+    &:hover{
+        mix-blend-mode: normal;
+    }
 
     h3{
-        text-align: end;
         font-feature-settings: 'pnum' on, 'lnum' on;
     }
 }
 
+.project-box:nth-of-type(even){
+    h3{
+        text-align: end;
+    }
+}
+
 .project-box:nth-of-type(odd){
-    align-items: end;
+    img{
+        align-self: flex-end;
+    }
 }
 
 .project-screenshoot{
@@ -30,3 +29,4 @@
     height: 394px;
     object-fit: cover;
 }
+

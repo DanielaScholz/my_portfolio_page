@@ -1,17 +1,18 @@
 <footer>
     <div class="flex margin-ri-le">
-        <img class="cursor-pointer" routerLink="/" src="../../assets/img/logo/logo-white.png" alt="personal logo">
+        <img routerLink="/" src="../../assets/img/logo/logo-white.png" alt="personal logo">
     </div>
-    <div class="d-flex-center-space-btw margin-ri-le">
-        <span> (c) Daniela Scholz 2023</span>
+
+    <div class="d-flex-center-space-btw margin-top-12 margin-btm-12 margin-ri-le">
+        <span> © Daniela Scholz 2023</span>
         <div class="icons-box">
             <a [href]="contacts.url[i]" target="_blank" *ngFor="let icon of contacts.name; let i = index">
-                <img class="img-animation" src="../../assets/img/footer/{{ icon }}.svg" alt="icons of {{ icon }}">
+                <img class="up-animation" src="../../assets/img/footer/{{ icon }}.svg" alt="icons of {{ icon }}">
             </a>
         </div>
     </div>
+
     <div class="legal-box d-flex-end margin-ri-le">
         <a routerLink="/legal-notice">Legal notice</a>
-        <div class="decoration-line"></div>
     </div>
 </footer>

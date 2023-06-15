@@ -13,16 +13,16 @@ fieldset{
 
 
         div{
-            width: 70px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            margin: 50px;
+            flex-basis: 20%;
+            margin-top: 25px;
+            margin-bottom: 25px;
             text-align: center;
             font-size: 16px;
             font-weight: 700;
-
             &:hover{
                 color: #5988FF;
             }
@@ -43,23 +43,23 @@ fieldset{
 @-webkit-keyframes wobble-horizontal-on-hover {
     16.65% {
       -webkit-transform: translateX(18px);
-      transform: translateX(18px);
+      transform: translateX(28px);
     }
     33.3% {
       -webkit-transform: translateX(-16px);
-      transform: translateX(-16px);
+      transform: translateX(-26px);
     }
     49.95% {
       -webkit-transform: translateX(14px);
-      transform: translateX(14px);
+      transform: translateX(24px);
     }
     66.6% {
       -webkit-transform: translateX(-12px);
-      transform: translateX(-12px);
+      transform: translateX(-22px);
     }
     83.25% {
       -webkit-transform: translateX(10px);
-      transform: translateX(10px);
+      transform: translateX(20px);
     }
     100% {
       -webkit-transform: translateX(0);
@@ -70,23 +70,23 @@ fieldset{
   @keyframes wobble-horizontal-on-hover {
     16.65% {
       -webkit-transform: translateX(18px);
-      transform: translateX(18px);
+      transform: translateX(28px);
     }
     33.3% {
       -webkit-transform: translateX(-16px);
-      transform: translateX(-16px);
+      transform: translateX(-26px);
     }
     49.95% {
       -webkit-transform: translateX(14px);
-      transform: translateX(14px);
+      transform: translateX(24px);
     }
     66.6% {
       -webkit-transform: translateX(-12px);
-      transform: translateX(-12px);
+      transform: translateX(-22px);
     }
     83.25% {
       -webkit-transform: translateX(10px);
-      transform: translateX(10px);
+      transform: translateX(20px);
     }
     100% {
       -webkit-transform: translateX(0);
@@ -100,7 +100,6 @@ fieldset{
     vertical-align: middle;
     -webkit-transform: perspective(1px) translateZ(0);
     transform: perspective(1px) translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   }
 
 
@@ -114,3 +113,16 @@ fieldset{
     -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1;
   }
+
+
+  .animated-arrow {
+    transition: all 1s; /* Übergangseffekt mit 1 Sekunde Dauer */
+
+    &:hover{
+      opacity: 0.8;
+
+    }
+  }
+
+
+  

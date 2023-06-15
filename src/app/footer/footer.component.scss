@@ -1,33 +1,52 @@
-footer{
+footer {
     background-color: black;
     color: #FFFCF3;
+    padding-bottom: 70px;
+    margin-top: -1px;
 
-
-    img{
+    img {
         height: 50px;
+        cursor: pointer;
     }
 
-    .icons-box{
-        a{
+    .icons-box {
+        a {
             margin-left: 50px;
         }
     }
 
-    .legal-box{
-        color: #FFFCF3;
-        font-size: 16px;
+    .legal-box {
+        a {
+            position: relative;
+            color: #FFFCF3;
+            font-size: 16px;
 
-        &:hover{
-            font-weight: 800;
+            &:hover {
+                font-weight: 800;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: -2px;
+                left: 0;
+                width: 0;
+                height: 2px;
+                background-color: #5988FF;
+                transition: width 125ms ease-in-out;
+            }
+
+            &:hover:after {
+                width: 100%;
+            }
         }
     }
 }
 
-.img-animation{
+.up-animation {
     transition: all 225ms ease-in-out;
 
-    &:hover{
+    &:hover {
         transform: translateY(-20px);
-
     }
 }

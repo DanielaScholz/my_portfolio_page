@@ -9,43 +9,97 @@ section {
         color: white;
     }
 
+
     form {
         width: 100%;
 
+        .fieldholder {
+            width: 50%;
+            display: flex;
+            align-items: flex-start;
+            position: relative;
+            margin: 14px 0 14px 0;
+        }
+
         input,
         textarea {
-            min-width: 50%; 
+            width: 100%;
+            height: 50px;
             font-family: 'Overpass';
             font-style: normal;
             font-weight: 400;
             font-size: 16px;
             color: #FFFCF3;
-            background-color: black;
             padding: 15px 25px;
-            margin: 14px 0 14px 0;
-            outline: none;
             border-top: 4px solid transparent;
             border-right: 4px solid transparent;
             border-left: 4px solid transparent;
             border-bottom: 2px solid #FFFCF3;
+            background-color: black;
 
-            &::placeholder{
+
+            &::placeholder {
                 font-family: 'Overpass';
                 font-style: normal;
                 font-weight: 400;
                 font-size: 16px;
-                color: #FFFCF3;    
+                color: #FFFCF3;
             }
 
-            &:hover{
+            &:focus::placeholder{
+                color: transparent;
+            }
+
+            &:focus{
+                border: 2px solid #FFFCF3;
+                border-radius: 5px;
+                outline: none;
+            }
+            
+            &:hover  {
                 border-top: 4px solid transparent;
                 border-right: 4px solid transparent;
                 border-left: 4px solid transparent;
                 border: 4px solid #FFFCF3;
+                border-radius: 5px;
+                outline: none;
+            }
+
+            &:valid{
+                border: 2px solid #FFFCF3;
+                border-radius: 5px;
+                outline: none;
             }
         }
 
+        textarea {
+            height: 200px;
+        }
+
+        label {
+            display: none;
+            font-size: 16px;
+            color: #FFFCF3;
+
+        }
+
+        input:focus+label,
+        input:valid+label,
+        textarea:focus+label,
+        textarea:valid+label {
+            display: flex;
+            position: absolute;
+            color: white;
+            top: -10px;
+            left: 25px;
+            padding: 0 5px 0 5px;
+            background-color: black;
+            font-family: 'Overpass';
+
+        }
+
     }
+
 
 
 }

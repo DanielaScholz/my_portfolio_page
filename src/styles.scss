@@ -1,11 +1,11 @@
 body {
+     display: flex;
+     flex-direction: column;
      margin: 0;
      font-family: 'Overpass', 'Segoe UI', Arial, Helvetica, sans-serif;
      font-size: 23px;
      font-weight: 400;
      background-color: #FFFCF3;
-     display: flex;
-     flex-direction: column;
 }
 
 html{
@@ -29,14 +29,14 @@ h3 {
 }
 
 h1 {
-     font-weight: 800;
      font-size: 128px;
+     font-weight: 800;
      text-align: center;
 }
 
 h2 {
-     font-weight: 800;
      font-size: 78px;
+     font-weight: 800;
 
      &:hover {
           color: #5988FF;
@@ -44,21 +44,35 @@ h2 {
 }
 
 h3 {
-     font-weight: 700;
      font-size: 48px;
+     font-weight: 700;
 }
 
-h4 {
+h4{
+     font-family: 'Syne';
+     font-size: 45px;
+     font-weight: 800;
      margin: 0;
-     font-weight: 700;
+}
+
+h5 {
      font-size: 32px;
+     font-weight: 700;
      color: #5988FF;
+     margin: 0;
+}
+
+h6{
+     font-size: 27px;
+     font-weight: 400;
+     color: #5988FF;
+     margin: 15px 0;
 }
 
 a {
      text-decoration: none;
-     cursor: pointer;
      color: inherit;
+     cursor: pointer;
 }
 
 .margin-ri-le {
@@ -93,6 +107,18 @@ a {
      justify-content: space-between;
 }
 
+.d-flex-center-space-even {
+     display: flex;
+     align-items: center;
+     justify-content: space-evenly;
+}
+
+.d-flex-center-center{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+
 .d-flex-column-center {
      display: flex;
      flex-direction: column;
@@ -115,42 +141,70 @@ a {
      font-family: 'Overpass';
      font-size: 23px;
      height: 68px;
-     width: 30%;
+     min-width: 25%;
      border: 4px solid black;
      background-color: white;
      color: black;
      cursor: pointer;
-     transition: all 100ms ease-in-out;
+     transition: all 0.1s ease-in-out;
+     outline: none;
+
 
      &:hover {
-          font-weight: 700;
-          width: 35%;
-          border: 4px solid black;
-          filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.15));
-     }
-
-     &:active {
           font-weight: 400;
           color: white;
           background-color: black;
           box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.15);
+          filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.15));
+     }
+
+}
+
+.btn-white{
+     width: 30%;
+
+     &:hover{
+          color: black;
+          background-color: white;
+          font-weight: 700;
+          width: 35%;
      }
 }
 
-.btn-dark-mode {
+.btn-black {
      color: #FFFCF3;
      background-color: black;
      border: 4px solid #FFFCF3;
+     width: 30%;
+     outline: none;
+
 
      &:hover {
           border: 4px solid #FFFCF3;
+          width: 35%;
      }
 
      &:active {
           color: black;
           background-color: #FFFCF3;
      }
+}
 
+.btn-blue{
+     color: #5988FF;
+     background-color:  white;
+     border: 4px solid #5988FF;
+
+
+     &:hover {
+          color: #FFFCF3;
+          background-color: #5988FF;
+          border: 4px solid #5988FF;
+     }
+
+     &:active {
+          border: 4px solid #5988FF;
+     }
 }
 
 .cream-font {
@@ -252,3 +306,7 @@ a {
           url('../src/assets/fonts/syne-v16-latin-800.ttf') format('truetype');
      /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
 }
+
+
+// html, body { height: 100%; }
+// body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

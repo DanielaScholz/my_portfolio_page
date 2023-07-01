@@ -1,4 +1,4 @@
-<div class="margin-ri-le">
+<!-- <div class="margin-ri-le">
     <h2 id="portfolio">Portfolio</h2>
     <span>Feel free to try out my latest development projects and look into their codes..</span>
 </div>
@@ -9,9 +9,38 @@
     </div>
     <div class="project-box">
         <div class="picture-box" [ngClass]="{'margin-left': isSecondElement(i), 'margin-right': !isSecondElement(i)}">
-            <div class="decoration-frame">
+            <div class="frame" [ngClass]="{'second-elem-frame': isSecondElement(i), 'first-elem-frame': !isSecondElement(i)}">
+                <img class="decoration-arrow" src="../../assets/img/portfolio/arrow-for-frame.svg" alt="">
             </div>
-            <div class="frame" [ngClass]="{'second-elem-frame': isSecondElement(i), 'default-elem-frame': !isSecondElement(i)}">
+            <img class="project-screenshoot" src=" {{ projects[i].img }}" alt="screenshoot of {{ projects[i].name }}">    
+        </div>
+        <div class="project-info" id="projectInfo-{{ i }}">
+            <h4>{{ projects[i].name }}</h4>
+            <h6>{{ projects[i].category}}</h6>
+            <span>{{ projects[i].description }}</span>
+            <div class="d-flex-center-space-even">
+                <button class="btn-style">Github</button>
+                <button class="btn-style btn-blue">Live test</button>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+
+
+
+<div class="margin-ri-le">
+    <h2 id="portfolio">Portfolio</h2>
+    <span>Feel free to try out my latest development projects and look into their codes..</span>
+</div>
+
+<div class="project-order margin-ri-le" *ngFor="let project of projects; let i = index">
+    <div>
+        <h3>{{ i + 1 }} / {{ projects.length }}</h3>
+    </div>
+    <div class="project-box" (mouseover)="showIndex(i)" (mouseout)="hideIndex(i)">
+        <div class="picture-box" [ngClass]="{'margin-left': isSecondElement(i), 'margin-right': !isSecondElement(i)}">
+            <div class="frame" [ngClass]="{'visible': isVisible(i), 'hidden': !isVisible(i), 'second-elem-frame': isSecondElement(i), 'first-elem-frame': !isSecondElement(i)}">
                 <img class="decoration-arrow" src="../../assets/img/portfolio/arrow-for-frame.svg" alt="">
             </div>
             <img class="project-screenshoot" src=" {{ projects[i].img }}" alt="screenshoot of {{ projects[i].name }}">    
@@ -27,4 +56,33 @@
         </div>
     </div>
 </div>
+
+
+<!-- <div class="margin-ri-le">
+    <h2 id="portfolio">Portfolio</h2>
+    <span>Feel free to try out my latest development projects and look into their codes..</span>
+</div>
+
+<div class="project-order margin-ri-le" *ngFor="let project of projects; let i = index">
+    <div>
+        <h3>{{ i + 1 }} / {{ projects.length }}</h3>
+    </div>
+    <div class="project-box" (mouseenter)="showInfo(i)" (mouseleave)="hideInfo(i)">
+        <div class="picture-box" [ngClass]="{'margin-left': isSecondElement(i), 'margin-right': !isSecondElement(i)}">
+            <div class="frame" [ngClass]="{'second-elem-frame': isSecondElement(i), 'first-elem-frame': !isSecondElement(i)}">
+                <img class="decoration-arrow" src="../../assets/img/portfolio/arrow-for-frame.svg" alt="">
+            </div>
+            <img class="project-screenshoot" src=" {{ projects[i].img }}" alt="screenshoot of {{ projects[i].name }}">    
+        </div>
+        <div class="project-info" id="projectInfo-{{ i }}" [ngClass]="isInfoVisible(i) ? 'visible' : 'hidden'">
+            <h4>{{ projects[i].name }}</h4>
+            <h6>{{ projects[i].category}}</h6>
+            <span>{{ projects[i].description }}</span>
+            <div class="d-flex-center-space-even">
+                <button class="btn-style">Github</button>
+                <button class="btn-style btn-blue">Live test</button>
+            </div>
+        </div>
+    </div>
+</div> -->
 

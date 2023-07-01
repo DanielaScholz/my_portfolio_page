@@ -3,7 +3,8 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-portfolio',
   templateUrl: './portfolio.component.html',
-  styleUrls: ['./portfolio.component.scss']
+  styleUrls: ['./portfolio.component.scss'],
+
 })
 export class PortfolioComponent {
   // projects =['Join', 'El pollo loco', 'Ring of fire', 'PokéDex']
@@ -16,6 +17,7 @@ export class PortfolioComponent {
       category: ['JavaScript', 'HTML', 'CSS'],
       github: 'https://github.com/DanielaScholz/join',
       liveTest: 'https://daniela-scholz.developerakademie.net/join/',
+      isVisable: false
     },
     {
       name: 'El pollo loco',
@@ -24,6 +26,7 @@ export class PortfolioComponent {
       category: ['JavaScript', 'HTML', 'CSS'],
       github: 'https://github.com/DanielaScholz/el_pollo_loco',
       liveTest: 'https://daniela-scholz.developerakademie.net/projekte/el_pollo_loco/',
+      isVisable: false
     },
     {
       name: 'Ring of fire',
@@ -32,6 +35,7 @@ export class PortfolioComponent {
       category: ['Angular', 'TypeScript', 'HTML', 'SCSS', 'Firebase'],
       github: 'https://github.com/DanielaScholz/ringoffire',
       liveTest: 'https://daniela-scholz.developerakademie.net/projekte/ringoffire',
+      isVisable: false
     },
     {
       name: 'PokéDex',
@@ -40,11 +44,27 @@ export class PortfolioComponent {
       category: ['JavaScript', 'HTML', 'CSS', 'API'],
       github: 'https://github.com/DanielaScholz/pokedex',
       liveTest: 'https://daniela-scholz.developerakademie.net/projekte/pokedex',
+      isVisable: false
     }
   ]
 
-  isSecondElement(index: number): boolean {
-    return index % 2 === 1;
+  isSecondElement(i: number): boolean {
+    return i % 2 === 1;
   }
+
+
+  showIndex(i: number){
+  this.projects[i].isVisable = true;
+  }
+
+  hideIndex(i: number){
+    this.projects[i].isVisable = false;
+  }
+
+  isVisible(i: number){
+    return this.projects[i].isVisable;
+  }
+
+
 
 }

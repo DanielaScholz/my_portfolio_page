@@ -13,7 +13,7 @@ html{
 
 }
 
-// COLORS:
+// === COLORS ===//
 // blue: #5988FF;
 // cream: #FFFCF3;
 
@@ -137,6 +137,8 @@ a {
      justify-content: flex-end;
 }
 
+// === BUTTONS ===//
+
 .btn-style {
      font-family: 'Overpass';
      font-size: 23px;
@@ -161,7 +163,7 @@ a {
 }
 
 .btn-white{
-     width: 30%;
+     min-width: 30%;
 
      &:hover{
           color: black;
@@ -211,10 +213,22 @@ a {
      color: #FFFCF3;
 }
 
+// === SCROLLBAR ===//
 
-
-
-// FONTS - Overpass, Syne
+::-webkit-scrollbar {
+     width: 10px; 
+   }
+   
+   ::-webkit-scrollbar-thumb {
+     background-color: #999; 
+     border-radius: 5px; 
+   }
+   
+   ::-webkit-scrollbar-track {
+     background-color: #FFFCF3; 
+   }
+   
+// === FONTS ===//
 
 /* overpass-300 - latin */
 @font-face {

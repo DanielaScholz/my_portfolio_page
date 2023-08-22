@@ -4,35 +4,81 @@
         <h5>Want to discuss a new project?</h5>
         <span>Get in touch with me and make it happen!</span>
 
-        <form #contactForm (ngSubmit)="submitForm()" ngNativeValidate class="d-flex-column-center">
+        <!-- <form #contactForm (ngSubmit)="checkInput()" ngNativeValidate class="d-flex-column-center">
 
             <div class="fieldholder">
-                <input #nameField type="text" id="name" placeholder="Your name" required>
+                <input #nameField type="text" id="name" placeholder="Your name" >
                 <label for="name">Your name</label>
             </div>
 
+            <div [class.empty-input]="nameError" class="empty-input">Your name is required</div>
+
             <div class="fieldholder">
-                <input #emailField type="email" id="email" placeholder="Your email" required>
+                <input #emailField type="email" id="email" placeholder="Your email" >
                 <label for="email">Your email</label>
             </div>
 
+            <div [class.empty-input]="emailError" class="empty-input">Your email is required</div>
+
             <div class="fieldholder">
-                <textarea #messageField name="message" placeholder="Your message" required></textarea>
+                <textarea #messageField name="message" placeholder="Your message" ></textarea>
+                <label for="message">Your message</label>
+            </div>
+
+            <div [class.empty-input]="messageError">Your message is empty</div>
+
+            <button #sendBtn type="submit" class="btn-style btn-black">Send message</button> 
+        </form> -->
+
+
+
+        <!-- <form #contactForm (ngSubmit)="submitForm()" ngNativeValidate class="d-flex-column-center">
+
+            <div class="fieldholder">
+                <input #nameField matInput
+                [formControl]="nameFormControl"
+                [errorStateMatcher]="matcher"
+                type="text" id="name" placeholder="Your name" >
+                <label for="name">Your name</label>
+            </div>
+            <mat-error *ngIf="nameFormControl.hasError('required')">
+              Name is <strong>required</strong>
+            </mat-error>
+
+
+
+            <div class="fieldholder">
+                <input #emailField type="email" id="email" placeholder="Your email" >
+                <label for="email">Your email</label>
+            </div>
+
+
+            <div class="fieldholder">
+                <textarea #messageField name="message" placeholder="Your message" ></textarea>
                 <label for="message">Your message</label>
             </div>
 
             <button #sendBtn type="submit" class="btn-style btn-black">Send message</button> 
-        </form>
+        </form>  -->
 
-        <!-- <form #contactForm (ngSubmit)="submitForm()" ngNativeValidate class="d-flex-column-center">
+
+
+        <form style="width: 100%;" #contactForm (ngSubmit)="submitForm()" ngNativeValidate class="d-flex-column-center">
             <mat-form-field appearance="outline">
                 <mat-label>Your name</mat-label>
-                <input #nameField matInput placeholder="Placeholder">
+
+                <input #nameField matInput 
+                [formControl]="nameFormControl"
+                [errorStateMatcher]="matcher"
+                placeholder="Placeholder">
                 <mat-icon matSuffix>verified</mat-icon>
+
+                <mat-error *ngIf="nameFormControl.hasError('required')">
+                  Name is required
+                </mat-error>
               </mat-form-field>
 
-
-              <mat-form-field class="example-full-width" appearance="outline">
+              <mat-form-field class="example-full-width customized-form" appearance="outline">
                 <mat-label>Your email</mat-label>
                 <input #emailField type="email" matInput 
                     [formControl]="emailFormControl"
@@ -43,18 +89,24 @@
                   Please enter a valid email address
                 </mat-error>
                 <mat-error *ngIf="emailFormControl.hasError('required')">
-                  Email is <strong>required</strong>
+                  Email is required
                 </mat-error>
               </mat-form-field>
 
-              <mat-form-field appearance="outline">
+              <mat-form-field class="customized-form" appearance="outline">
                 <mat-label>Your message</mat-label>
-                <textarea #messageField matInput></textarea>
+                <textarea #messageField matInput
+                [formControl]="messageFormControl"
+                [errorStateMatcher]="matcher"
+                ></textarea>
+                <mat-error *ngIf="messageFormControl.hasError('required')">
+                  Message is empty
+                </mat-error>
               </mat-form-field>
 
-              <button #sendBtn type="submit" class="btn-style btn-black">Send message</button> 
+              <button #sendBtn type="submit" class="btn-style btn-black">Submit</button> 
 
-        </form> -->
+        </form> 
 
 
     </div>

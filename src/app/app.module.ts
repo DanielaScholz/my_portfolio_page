@@ -19,8 +19,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatIconModule} from '@angular/material/icon';
 import { ArrowComponent } from './arrow/arrow.component';
-
-
+import { ScrollTopComponent } from './scroll-top/scroll-top.component';
 
 
 @NgModule({
@@ -36,6 +35,7 @@ import { ArrowComponent } from './arrow/arrow.component';
     FooterComponent,
     LegalNoticeComponent,
     ArrowComponent,
+    ScrollTopComponent
   ],
   imports: [
     BrowserModule,
@@ -47,9 +47,6 @@ import { ArrowComponent } from './arrow/arrow.component';
     MatInputModule,
     MatFormFieldModule,
     MatIconModule
-   
-    
-    
   ],
 
   providers: [

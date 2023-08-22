@@ -3,19 +3,26 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 170px;
 }
-
 
 .name-box {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
 
-    div {
+    .decoration-line {
+        width: 40%;
+        border: 1.5px solid black;
+    }
+
+    .name {
         font-family: 'Overpass';
         font-weight: 700;
         font-size: 48px;
         color: #5988FF;
+        padding-left: 12px;
     }
 }
 
@@ -27,12 +34,26 @@ header {
 }
 
 .email-box {
-    transform-origin: 120px 120px;
-    transform: rotate(-90deg);
+    writing-mode: vertical-lr;
 }
-
 
 .scroll-img {
     height: auto;
 }
 
+//RESPONSIVNESS
+@media (max-width: 900px) {
+    .name-box {
+        .name {
+            font-size: 36px;
+        }
+    }
+}
+
+@media (max-width: 540px) {
+    .name-box {
+        .name {
+            font-size: 23px;
+        }
+    }
+}

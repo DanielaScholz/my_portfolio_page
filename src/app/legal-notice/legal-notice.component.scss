@@ -1,0 +1,49 @@
+h1{
+    font-size: 30px;
+    color: #5988FF;
+    margin: revert;
+    word-wrap: break-word;
+}
+
+h2{
+    font-size: 27px;
+    margin: revert;
+    word-wrap: break-word;
+
+    &:hover{
+        color: unset;
+    }
+}
+
+h3{
+    font-size: 25px;
+    font-family: 'Syne';
+    margin: revert;
+    word-wrap: break-word;
+}
+
+p{
+    word-wrap: break-word;
+}
+
+.legal-box{
+    padding: 100px 100px 0px 100px;
+}
+
+@media (max-width: 900px) {
+    .legal-box{
+        padding: 100px 75px 0px 75px;
+    }
+}
+
+@media (max-width: 800px) {
+    .legal-box{
+        padding: 100px 50px 0px 50px;
+    }
+}
+
+@media (max-width: 390px) {
+    .legal-box{
+        padding: 100px 25px 0px 25px;
+    }
+}

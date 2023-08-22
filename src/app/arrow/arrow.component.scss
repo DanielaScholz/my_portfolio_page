@@ -1,63 +1,56 @@
 section {
-    position: relative;
-    height: 300px;
-    width: auto;
-
-    img {
-        position: absolute;
-        transition: all 225ms ease;
+    .arrow-position-left {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
     }
 
-    .arrow-left-direction{
-        @extend img;
-        right: 411px;
-        top: 102px;
+    .arrow-position-right {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
     }
 
-    .arrow-right-direction{
-        @extend img;
-        left: 411px;
-        top: 102px;
+
+    .move-left {
+        transition: transform 0.5s ease-in-out 0.5s;
+        transform: translate(-100px, 100px);
     }
 
-    .arrow{
-        position: absolute;
-        height: 200px;
-        border: 2px solid black;
-        background-color: black;
-        transition: all 225ms ease;
+
+    .move-right {
+        transition: transform 0.5s ease-in-out 0.5s;
+        transform: translate(100px, 100px);
+        // animation: moveRight 1s 0.8ms ease-in-out forwards;
     }
 
-    .arrowtail-left {
-        @extend .arrow;
-        rotate: 45deg;
-        right: 421px;
-        top: 15px;
-    }
+    // @keyframes moveLeft {
+    //     to {
+    //         transform: translate(-100px, 100px);
+    //     }
+    // }
 
-    .arrowtail-right{
-        @extend .arrow;
-        rotate: -45deg;
-        left: 421px;
-        top: 15px;
-    }
+    // @keyframes moveRight {
+    //     to {
+    //         transform: translate(100px, 100px);
+    //     }
+    // }
+}
 
-    &:hover {
-        .arrow-left-direction {
-            transform: translate(-100px, 100px);
+
+@media (max-width: 475px) {
+    section {
+        img {
+            height: 200px;
         }
 
-        .arrow-right-direction {
-            transform: translate(100px, 100px);
+        .move-left {
+            transform: translate(-50px, 50px);
         }
-
-        .arrowtail-left {
-            transform: translate(0px, 140px);
-        }
-
-        .arrowtail-right {
-            transform: translate(0px, 140px);
+    
+    
+        .move-right {
+            transform: translate(50px, 50px);
         }
     }
 }
-

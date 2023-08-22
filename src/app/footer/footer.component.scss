@@ -4,18 +4,33 @@ footer {
     padding-bottom: 70px;
     margin-top: -1px;
 
-    img {
-        height: 50px;
-        cursor: pointer;
+    .logo-box {
+        display: flex;
+        padding-top: 70px;
+
+        img {
+            height: 50px;
+            cursor: pointer;
+        }
     }
 
-    .icons-box {
-        a {
-            margin-left: 50px;
+    .middle-box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .icons-box {
+            a {
+                margin-left: 50px;
+            }
         }
     }
 
     .legal-box {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
         a {
             position: relative;
             color: #FFFCF3;
@@ -50,3 +65,37 @@ footer {
         transform: translateY(-20px);
     }
 }
+
+@media (max-width: 900px) {
+    footer {
+        .logo-box {
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 25px;
+        }
+
+        .middle-box {
+            flex-direction: column-reverse;
+
+            span {
+                margin: 28px 0;
+                text-align: center;
+            }
+
+            .icons-box {
+                display: flex;
+                align-items: center;
+
+                a {
+                    margin-right: 25px;
+                    margin-left: 25px;
+                }
+            }
+        }
+
+        .legal-box {
+            justify-content: center;
+        }
+    }
+}
+

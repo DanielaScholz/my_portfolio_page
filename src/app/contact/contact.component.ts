@@ -1,6 +1,6 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, ViewChild, ViewEncapsulation } from '@angular/core';
 import { FormControl, FormGroupDirective, NgForm, Validators } from '@angular/forms';
-import {ErrorStateMatcher} from '@angular/material/core';
+import { ErrorStateMatcher } from '@angular/material/core';
 
 export class MyErrorStateMatcher implements ErrorStateMatcher {
   isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
@@ -12,7 +12,7 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.scss']
+  styleUrls: ['./contact.component.scss'],
 })
 
 
@@ -23,10 +23,37 @@ export class ContactComponent {
   @ViewChild('messageField') messageField!: ElementRef;
   @ViewChild('sendBtn') sendBtn!: ElementRef;
 
+  // nameError = false;
+  // emailError = false;
+  // messageError = false;
+
+  nameFormControl = new FormControl('', [Validators.required])
   emailFormControl = new FormControl('', [Validators.required, Validators.email]);
+  messageFormControl = new FormControl('', [Validators.required])
   matcher = new MyErrorStateMatcher();
 
+  // checkInput() {
+  //   let name = this.nameField.nativeElement;
+  //   let email = this.emailField.nativeElement;
+  //   let message = this.messageField.nativeElement;
 
+  //   if (name.value == '') {
+  //     this.nameError = true;
+  //   }
+
+  //    if (email.value == '') {
+  //     this.emailError = true;
+  //   }
+
+  //    if (message.value == '') {
+  //     this.messageError = true;
+  //   }
+
+  //   else if (name.length >1 && email.length > 1 && message.length >1) {
+  //     this.submitForm();
+  //     console.log('submitted form')
+  //   } 
+  // }
 
   async submitForm() {
     console.log(this.contactForm);
@@ -68,17 +95,17 @@ export class ContactComponent {
     email.value = '';
     message.value = '';
     sendBtn.value = '';
-
-
-
-
   }
 
 
-
-  
-
-
 }
+
+
+
+
+
+
+
+
 
 

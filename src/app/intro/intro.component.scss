@@ -11,19 +11,19 @@ header {
     align-items: center;
     justify-content: center;
     width: 100%;
+}
 
-    .decoration-line {
-        width: 40%;
-        border: 1.5px solid black;
-    }
+.decoration-line {
+    width: 40%;
+    border: 1.5px solid black;
+}
 
-    .name {
-        font-family: 'Overpass';
-        font-weight: 700;
-        font-size: 48px;
-        color: #5988FF;
-        padding-left: 12px;
-    }
+.name {
+    font-family: 'Overpass';
+    font-weight: 700;
+    font-size: 48px;
+    color: #5988FF;
+    padding-left: 12px;
 }
 
 .info-box {
@@ -41,19 +41,14 @@ header {
     height: auto;
 }
 
-//RESPONSIVNESS
 @media (max-width: 900px) {
-    .name-box {
-        .name {
-            font-size: 36px;
-        }
+    .name {
+        font-size: 36px;
     }
 }
 
 @media (max-width: 540px) {
-    .name-box {
-        .name {
-            font-size: 23px;
-        }
+    .name {
+        font-size: 23px;
     }
 }

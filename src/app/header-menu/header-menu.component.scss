@@ -27,7 +27,7 @@ nav {
     }
 }
 
-//MOBILE BURGER-MENU
+// === MOBILE BURGER-MENU ===//
 
 .mobile-nav {
     flex-direction: column;
@@ -68,7 +68,6 @@ nav {
     }
 }
 
-
 .burger-menu {
     display: flex;
     align-items: center;
@@ -96,13 +95,6 @@ svg {
         transform-origin: 1px 28px;
     }
 }
-
-// .mobile-menu-container {
-//     // height: 100vh;
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     justify-content: space-evenly;
 
 .mobile-links {
     display: flex;
@@ -132,38 +124,6 @@ svg {
     height: 100vh;
 }
 
-
-
-    //     .mobile-footer {
-    //         width: 100vw;
-    //         display: flex;
-    //         flex-direction: column;
-    //         align-items: normal;
-    //         justify-content: space-between;
-
-    //         background-color: black;
-    //         clip-path: polygon(100% 22%, 100% 100%, 0 100%, 0 0);
-    //         padding: 25px;
-
-    //         span {
-    //             color: #FFFCF3;
-    //             font-size: 20px;
-    //             margin-top: 10px;
-    //         }
-
-    //         .icons-box {
-    //             justify-content: flex-end;
-    //             margin-top: 10px;
-
-    //             a {
-    //                 margin: 10px;
-    //             }
-    //         }
-    //     }
-    // }
-
-
-//RESPONSIVNESS
 @media (max-width: 900px) {
     .mobile-nav{
         padding: 25px 75px 0px 75px;
@@ -173,8 +133,6 @@ svg {
             padding-right: 75px;
         }
     }
-
-
 }
 
 @media (max-width: 800px) {

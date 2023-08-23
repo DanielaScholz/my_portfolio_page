@@ -11,7 +11,6 @@ fieldset {
     flex-wrap: wrap;
     justify-content: space-evenly;
 
-
     div {
       display: flex;
       flex-direction: column;
@@ -39,9 +38,8 @@ fieldset {
   }
 }
 
-/*===================*/
-/* WOOBLE HORIZONTAL
-/*===================*/
+
+// === WOOBLE HORIZONTAL ANIMATION ===//
 
 @-webkit-keyframes wobble-horizontal-on-hover {
   16.65% {

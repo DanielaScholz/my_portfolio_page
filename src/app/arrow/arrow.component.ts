@@ -17,23 +17,21 @@ export class ArrowComponent implements OnInit {
 
   observeScroll(direction: string): void {
     // const options = {rootMargin: "-200px"};
-    const options = {threshold: 0.5};
+    let options = { threshold: 0.5 };
 
     this.observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
-        const arrow = entry.target.querySelector(`.arrow-position-${direction}`);
+        let arrow = entry.target.querySelector(`.arrow-position-${direction}`);
 
         if (entry.isIntersecting) {
           arrow.classList.add(`move-${direction}`);
-          return; // if we added the class, exit the function
+        } else {
+          arrow.classList.remove(`move-${direction}`);
         }
-
-        // No intersecting, remove the class!
-        arrow.classList.remove(`move-${direction}`);
       });
     }, options);
 
-    const arrowElement = this.elementRef.nativeElement.querySelector('.arrow-section');
+    let arrowElement = this.elementRef.nativeElement.querySelector('.arrow-section');
     this.observer.observe(arrowElement);
   }
 }

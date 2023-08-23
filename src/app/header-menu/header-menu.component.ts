@@ -27,6 +27,4 @@ export class HeaderMenuComponent implements OnInit  {
     Storage.setToggleMenu(!this.toggleMenu);
     this.toggleMenu = Storage.toggleMenu;
   }
-
-
 }

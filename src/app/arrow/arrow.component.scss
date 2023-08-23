@@ -11,32 +11,16 @@ section {
         justify-content: flex-start;
     }
 
-
     .move-left {
         transition: transform 0.5s ease-in-out 0.5s;
         transform: translate(-100px, 100px);
     }
 
-
     .move-right {
         transition: transform 0.5s ease-in-out 0.5s;
         transform: translate(100px, 100px);
-        // animation: moveRight 1s 0.8ms ease-in-out forwards;
     }
-
-    // @keyframes moveLeft {
-    //     to {
-    //         transform: translate(-100px, 100px);
-    //     }
-    // }
-
-    // @keyframes moveRight {
-    //     to {
-    //         transform: translate(100px, 100px);
-    //     }
-    // }
 }
-
 
 @media (max-width: 475px) {
     section {
@@ -47,7 +31,6 @@ section {
         .move-left {
             transform: translate(-50px, 50px);
         }
-    
     
         .move-right {
             transform: translate(50px, 50px);

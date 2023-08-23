@@ -34,12 +34,12 @@ export class PortfolioComponent implements OnInit {
     },
     {
       id: 3,
-      name: 'Ring of fire',
+      name: 'Projekt aus nächsten Modul',
       img: '../../assets/img/portfolio/Ring_of_fire.PNG',
-      description: 'A popular card drinking gmae based on Angular and using the Firebase.',
+      description: 'Hier steht dann eine Beschreibung für das CRM Management-Tool!',
       category: ['Angular', ' TypeScript', ' HTML', ' SCSS', ' Firebase'],
-      github: 'https://github.com/DanielaScholz/ringoffire',
-      liveTest: 'http://daniela-scholz.at/projects/ringoffire/',
+      github: 'https://github.com/DanielaScholz/',
+      liveTest: 'http://daniela-scholz.at/projects/',
     },
     {
       id: 4,
@@ -75,7 +75,6 @@ export class PortfolioComponent implements OnInit {
         let projectPic = entry.target;
         let projectInfo = entry.target.lastElementChild;
         let frame = entry.target.querySelector('.frame');
-        let headline = entry.target.querySelector('#portfolio');
         let arrow = entry.target.querySelector('.decoration-arrow');
 
         let isOdd = this.isOdd(parseInt(entry.target.id));
@@ -85,7 +84,6 @@ export class PortfolioComponent implements OnInit {
           projectPic.classList.add('color');
           projectInfo.classList.add('slide-in');
           frame.classList.add('show');
-          // headline.classList.add('highlight');
           arrow.classList.add(isOdd ? 'animate-arrow-right' : 'animate-arrow-left');
 
           //No intersecting, remove the class!
@@ -93,7 +91,6 @@ export class PortfolioComponent implements OnInit {
           projectPic.classList.remove('color');
           projectInfo.classList.remove('slide-in');
           frame.classList.remove('show');
-          // headline.classList.remove('highlight');
           arrow.classList.remove(isOdd ? 'animate-arrow-right' : 'animate-arrow-left');
         }
       });
@@ -102,10 +99,5 @@ export class PortfolioComponent implements OnInit {
     box.forEach((box: Element) => {
       this.observer.observe(box);
     })
-
-
-
-    // const headlineBox = this.elementRef.nativeElement.querySelector('.headline-box');
-    // this.observer.observe(headlineBox);
   }
 }

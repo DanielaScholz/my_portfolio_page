@@ -8,7 +8,6 @@
     </div>
 </nav>
 
-
 <nav class="mobile-nav" *ngIf="!isDesktop" [class.mobile-100vh]="toggleMenu">
     <div>
         <img routerLink="/" src="../../assets/img/logo/logo-black.png" alt="personal logo">
@@ -20,11 +19,6 @@
             </svg>
         </div>
     </div>
-    <!-- <app-mobile-menu *ngIf="toggleMenu"></app-mobile-menu> -->
-
-    <!-- <div class="mobile-menu-container" *ngIf="toggleMenu">
-
-        </div> -->
 
     <div class="mobile-links" *ngIf="toggleMenu">
         <a href="#about-me" (click)="closeMenu()">
@@ -40,7 +34,6 @@
             <div>Contact</div>
         </a>
     </div>
-
 
     <div class="mobile-footer" *ngIf="toggleMenu">
         <h3 id="contact" class="light-on-dark">Say hi!</h3>

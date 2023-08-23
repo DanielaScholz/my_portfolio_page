@@ -16,7 +16,5 @@ export class StartComponent implements OnInit {
     window.addEventListener('resize', () => {
       this.isDesktop = Storage.checkIfDesktop();
     });
-
   }
-
 }

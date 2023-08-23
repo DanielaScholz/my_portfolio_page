@@ -96,8 +96,6 @@ export class ContactComponent {
     message.value = '';
     sendBtn.value = '';
   }
-
-
 }
 
 

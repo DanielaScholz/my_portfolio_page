@@ -3,7 +3,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     padding: 25px 100px 25px 100px;
-    position: fixed;
+    position: absolute;
     left: 0;
     right: 0;
     top: 0;
@@ -24,6 +24,21 @@ nav {
         &:hover {
             color: #5988FF;
         }
+    }
+}
+
+.show{
+    position: fixed;
+    animation: show 0.5s forwards;
+}
+
+@keyframes show {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
     }
 }
 

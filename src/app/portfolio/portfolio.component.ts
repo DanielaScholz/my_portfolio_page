@@ -17,16 +17,16 @@ export class PortfolioComponent implements OnInit {
     {
       id: 1,
       name: 'Join',
-      img: '../../assets/img/portfolio/Join.PNG',
+      img: 'assets/img/portfolio/Join.PNG',
       description: 'A task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
       category: ['JavaScript', ' HTML', ' CSS'],
       github: 'https://github.com/DanielaScholz/join',
-      liveTest: 'https://daniela-scholz.at/projects/join/',
+      liveTest: 'https://daniela-scholz.at/projects/join/index.html',
     },
     {
       id: 2,
       name: 'El pollo loco',
-      img: '../../assets/img/portfolio/El_pollo_loco.PNG',
+      img: 'assets/img/portfolio/El_pollo_loco.PNG',
       description: 'A simple Jump-and-Run game based on an object-oriented approach. Help Pepe collect coins and bottles to fight against crazy chicken.',
       category: ['JavaScript', ' HTML', ' CSS'],
       github: 'https://github.com/DanielaScholz/el_pollo_loco',
@@ -35,7 +35,7 @@ export class PortfolioComponent implements OnInit {
     {
       id: 3,
       name: 'Projekt aus nächsten Modul',
-      img: '../../assets/img/portfolio/Ring_of_fire.PNG',
+      img: 'assets/img/portfolio/Ring_of_fire.PNG',
       description: 'Hier steht dann eine Beschreibung für das CRM Management-Tool!',
       category: ['Angular', ' TypeScript', ' HTML', ' SCSS', ' Firebase'],
       github: 'https://github.com/DanielaScholz/',
@@ -44,7 +44,7 @@ export class PortfolioComponent implements OnInit {
     {
       id: 4,
       name: 'PokéDex',
-      img: '../../assets/img/portfolio/PokéDex.PNG',
+      img: 'assets/img/portfolio/PokéDex.PNG',
       description: 'Based on the PokéAPI a simple library that provides and catalogues pokemon information.',
       category: ['JavaScript', ' HTML', ' CSS', ' API'],
       github: 'https://github.com/DanielaScholz/pokedex',

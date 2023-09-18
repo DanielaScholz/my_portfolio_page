@@ -19,6 +19,13 @@ article {
             text-align: justify;
             text-align-last: none;
         }
+
+        a {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
     }
 }
 
@@ -44,7 +51,7 @@ article {
     opacity: 0;
 }
 
-.show{
+.show {
     opacity: 1 !important;
     transition: opacity 225ms ease;
 }
@@ -59,16 +66,16 @@ article {
     object-fit: cover;
 }
 
-@media (max-width: 900px ) {
-    #about-me{
+@media (max-width: 900px) {
+    #about-me {
         text-align: center;
     }
 
-    article{
+    article {
         flex-direction: column-reverse;
         align-items: center;
 
-        section{
+        section {
             margin-right: unset;
             margin-top: 50px;
             width: auto;

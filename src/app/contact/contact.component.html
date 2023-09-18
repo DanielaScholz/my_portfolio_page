@@ -1,10 +1,10 @@
 <section>
-    <h3 id="contact" class="light-on-dark">Contact me!</h3>
-    <div class="d-flex-column-center">
-        <h5>Want to discuss a new project?</h5>
-        <span>Get in touch with me and make it happen!</span>
+  <h3 id="contact" class="light-on-dark">Contact me!</h3>
+  <div class="d-flex-column-center">
+    <h5>Want to discuss a new project?</h5>
+    <span>Get in touch with me and make it happen!</span>
 
-        <!-- <form #contactForm (ngSubmit)="checkInput()" ngNativeValidate class="d-flex-column-center">
+    <!-- <form #contactForm (ngSubmit)="checkInput()" ngNativeValidate class="d-flex-column-center">
 
             <div class="fieldholder">
                 <input #nameField type="text" id="name" placeholder="Your name" >
@@ -32,7 +32,7 @@
 
 
 
-        <!-- <form #contactForm (ngSubmit)="submitForm()" ngNativeValidate class="d-flex-column-center">
+    <!-- <form #contactForm (ngSubmit)="submitForm()" ngNativeValidate class="d-flex-column-center">
 
             <div class="fieldholder">
                 <input #nameField matInput
@@ -63,48 +63,48 @@
 
 
 
-        <form style="width: 100%;" #contactForm (ngSubmit)="submitForm()" ngNativeValidate class="d-flex-column-center">
-            <mat-form-field appearance="outline">
-                <mat-label>Your name</mat-label>
+    <form style="width: 100%;" #contactForm (ngSubmit)="submitForm()" ngNativeValidate class="d-flex-column-center">
+      <mat-form-field appearance="outline">
+        <mat-label>Your name</mat-label>
 
-                <input #nameField matInput 
-                [formControl]="nameFormControl"
-                [errorStateMatcher]="matcher"
-                placeholder="Placeholder">
-                <mat-icon matSuffix>verified</mat-icon>
+        <input #nameField matInput [formControl]="nameFormControl" [errorStateMatcher]="matcher"
+          placeholder="Placeholder">
+        <mat-icon matSuffix>verified</mat-icon>
 
-                <mat-error *ngIf="nameFormControl.hasError('required')">
-                  Name is required
-                </mat-error>
-              </mat-form-field>
+        <mat-error *ngIf="nameFormControl.hasError('required')">
+          Name is required
+        </mat-error>
+      </mat-form-field>
 
-              <mat-form-field class="example-full-width customized-form" appearance="outline">
-                <mat-label>Your email</mat-label>
-                <input #emailField type="email" matInput 
-                    [formControl]="emailFormControl"
-                    [errorStateMatcher]="matcher"
-                       placeholder="Ex. pat@example.com">
-                       <mat-icon matSuffix>verified</mat-icon>
-                <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
-                  Please enter a valid email address
-                </mat-error>
-                <mat-error *ngIf="emailFormControl.hasError('required')">
-                  Email is required
-                </mat-error>
-              </mat-form-field>
+      <mat-form-field class="example-full-width customized-form" appearance="outline">
+        <mat-label>Your email</mat-label>
+        <input #emailField type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher"
+          placeholder="Ex. pat@example.com">
+        <mat-icon matSuffix>verified</mat-icon>
+        <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+          Please enter a valid email address
+        </mat-error>
+        <mat-error *ngIf="emailFormControl.hasError('required')">
+          Email is required
+        </mat-error>
+      </mat-form-field>
 
-              <mat-form-field class="customized-form" appearance="outline">
-                <mat-label>Your message</mat-label>
-                <textarea #messageField matInput
-                [formControl]="messageFormControl"
-                [errorStateMatcher]="matcher"
-                ></textarea>
-                <mat-error *ngIf="messageFormControl.hasError('required')">
-                  Message is empty
-                </mat-error>
-              </mat-form-field>
+      <mat-form-field class="customized-form" appearance="outline">
+        <mat-label>Your message</mat-label>
+        <textarea #messageField matInput [formControl]="messageFormControl" [errorStateMatcher]="matcher"></textarea>
+        <mat-error *ngIf="messageFormControl.hasError('required')">
+          Message is empty
+        </mat-error>
+      </mat-form-field>
 
-              <button #sendBtn type="submit" class="btn-style btn-black">Submit</button> 
-        </form> 
-    </div>
+      <button #sendBtn type="submit" class="btn-style btn-black">Submit</button>
+    </form>
+  </div>
+
+  <div class="position">
+    <div #submitMsg class="submitMsg hide">Alert</div>
+  </div>
+
+
+
 </section>

@@ -1,20 +1,61 @@
-.arrow-box {
-    position: relative;
- 
-    .scroll-top-arrow {
-        background-image: url(../../assets/img/scroll-top/arrow-scroll-top-default.svg);
-        background-repeat: no-repeat;
-        background-position: center;
-        position: absolute;
-        bottom: 50px;
-        right: 100px;
-        height: 100px;
-        width: 50px;
-        cursor: pointer;
+// .arrow-box {
+//     position: relative;
+
+//     .scroll-top-arrow {
+//         background-image: url(../../assets/img/scroll-top/arrow-scroll-top-default.svg);
+//         background-repeat: no-repeat;
+//         background-position: center;
+//         position: absolute;
+//         bottom: 50px;
+//         right: 100px;
+//         height: 100px;
+//         width: 50px;
+//         cursor: pointer;
+//     }
+// }
+
+// .show{
+//     background-image: url(../../assets/img/scroll-top/arrow-scroll-top-large.svg) !important;
+//     transition: background-image 225ms ease-in-out 0.5s;
+// }
+
+.scroll-to-top {
+    display: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: white;
+    border: 3px solid black;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    transition: 0.5s;
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.1);
     }
 }
 
-.show{
-    background-image: url(../../assets/img/scroll-top/arrow-scroll-top-large.svg) !important;
-    transition: background-image 225ms ease-in-out 0.5s;
+.scroll-top-arrow {
+    border-top: 5px solid black;
+    border-right: 5px solid black;
+    width: 20px;
+    height: 20px;
+    transform: translate(17.5px, 20px) rotate(-45deg);
+}
+
+.show {
+    display: block;
+    animation: show 1s forwards;
+}
+
+@keyframes show {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }

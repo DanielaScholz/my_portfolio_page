@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild, ViewEncapsulation } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { FormControl, FormGroupDirective, NgForm, Validators } from '@angular/forms';
 import { ErrorStateMatcher } from '@angular/material/core';
 
@@ -15,45 +15,18 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
   styleUrls: ['./contact.component.scss'],
 })
 
-
 export class ContactComponent {
   @ViewChild('contactForm') contactForm!: ElementRef;
   @ViewChild('nameField') nameField!: ElementRef;
   @ViewChild('emailField') emailField!: ElementRef;
   @ViewChild('messageField') messageField!: ElementRef;
   @ViewChild('sendBtn') sendBtn!: ElementRef;
-
-  // nameError = false;
-  // emailError = false;
-  // messageError = false;
+  @ViewChild('submitMsg') submitMsg!: ElementRef;
 
   nameFormControl = new FormControl('', [Validators.required])
   emailFormControl = new FormControl('', [Validators.required, Validators.email]);
   messageFormControl = new FormControl('', [Validators.required])
   matcher = new MyErrorStateMatcher();
-
-  // checkInput() {
-  //   let name = this.nameField.nativeElement;
-  //   let email = this.emailField.nativeElement;
-  //   let message = this.messageField.nativeElement;
-
-  //   if (name.value == '') {
-  //     this.nameError = true;
-  //   }
-
-  //    if (email.value == '') {
-  //     this.emailError = true;
-  //   }
-
-  //    if (message.value == '') {
-  //     this.messageError = true;
-  //   }
-
-  //   else if (name.length >1 && email.length > 1 && message.length >1) {
-  //     this.submitForm();
-  //     console.log('submitted form')
-  //   } 
-  // }
 
   async submitForm() {
     console.log(this.contactForm);
@@ -61,30 +34,38 @@ export class ContactComponent {
     let email = this.emailField.nativeElement;
     let message = this.messageField.nativeElement;
     let sendBtn = this.sendBtn.nativeElement;
-
-    console.log(email.value);
+    let submitMsg = this.submitMsg.nativeElement;
 
     name.disabled = true;
     email.disabled = true;
     message.disabled = true;
     sendBtn.disabled = true;
 
-    //Animation anzeigen die getriggert wird!
-
     let fd = new FormData();
     fd.append('name', name.value);
     fd.append('email', email.value);
     fd.append('message', message.value);
 
-    //senden
-    await fetch('https://daniela-scholz.developerakademie.net/send_mail/send_mail.php',
-      {
+    try {
+      const response = await fetch('https://daniela-scholz.at/send_mail/send_mail.php', {
         method: 'POST',
         body: fd
-      }
-    );
+      });
 
-    //Nachricht - erfolgreiche sendung einfügen
+      if (response.ok) {
+        submitMsg.textContent = 'E-Mail erfolgreich gesendet!';
+        this.fadeInOutSubmitMsg();
+      } else {
+        // Fehlerhafte Antwort vom Server
+        submitMsg.textContent = 'E-Mail konnte nicht gesendet werden, bitte erneut versuchen!'
+        this.fadeInOutSubmitMsg();
+      }
+    } catch (error) {
+      // Fehler beim Senden der Anfrage
+      console.error('Fehler beim Senden der Anfrage:', error);
+      submitMsg.textContent = 'Es ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut.'
+      this.fadeInOutSubmitMsg();
+    }
 
     name.disabled = false;
     email.disabled = false;
@@ -96,7 +77,21 @@ export class ContactComponent {
     message.value = '';
     sendBtn.value = '';
   }
+
+  fadeInOutSubmitMsg() {
+    let submitMsg = this.submitMsg.nativeElement;
+    submitMsg.classList.add('visible');
+    submitMsg.classList.remove('hide');
+    setTimeout(() => {  
+      submitMsg.classList.remove('visible');
+    }, 3000);
+    setTimeout(() => {
+      submitMsg.classList.add('hide');
+    }, 6000);
+
+  }
 }
+
 
 
 

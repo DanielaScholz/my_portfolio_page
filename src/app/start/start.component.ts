@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Storage } from '../modules/storage';
 
-
-
 @Component({
   selector: 'app-start',
   templateUrl: './start.component.html',

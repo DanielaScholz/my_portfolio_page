@@ -22,23 +22,28 @@ export class HeaderMenuComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
     if (this.isDesktop) {
-      this.showHideNav(this.desktopNav.nativeElement);
+      this.showOrHideNav(this.desktopNav.nativeElement);
     } else {
-      this.showHideNav(this.mobileNav.nativeElement);
+      this.showOrHideNav(this.mobileNav.nativeElement);
     }
   }
 
   toggleMobileMenu(): void {
     Storage.setToggleMenu(!Storage.getToggleMenu());
     this.toggleMenu = !this.toggleMenu;
+    this.toggleOverflow();
   }
 
-  closeMenu() {
+  toggleOverflow() {
+    document.body.classList.toggle('overflow-hidden');
+  }
+
+  closeMobileMenu() {
     Storage.setToggleMenu(!this.toggleMenu);
     this.toggleMenu = Storage.toggleMenu;
   }
 
-  showHideNav(elem: any) {
+  showOrHideNav(elem: any) {
     let scrollPos1 = window.scrollY;
     let navigation = elem;
 

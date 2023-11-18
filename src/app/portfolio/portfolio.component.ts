@@ -27,19 +27,19 @@ export class PortfolioComponent implements OnInit {
       id: 2,
       name: 'El pollo loco',
       img: 'assets/img/portfolio/El_pollo_loco.PNG',
-      description: 'A simple Jump-and-Run game based on an object-oriented approach. Help Pepe collect coins and bottles to fight against crazy chicken.',
+      description: 'A simple Jump-and-Run game based on an object-oriented approach. Help Pepe collect coins and bottles to fight against crazy the chicken.',
       category: ['JavaScript', ' HTML', ' CSS'],
       github: 'https://github.com/DanielaScholz/el_pollo_loco',
       liveTest: 'https://daniela-scholz.at/projects/el_pollo_loco/',
     },
     {
       id: 3,
-      name: 'Projekt aus nächsten Modul',
-      img: 'assets/img/portfolio/Ring_of_fire.PNG',
-      description: 'Hier steht dann eine Beschreibung für das CRM Management-Tool!',
+      name: 'Simple-CRM',
+      img: 'assets/img/portfolio/Simple_CRM.PNG',
+      description: 'A simple Customer Relationship Management system working with CRUD functionality',
       category: ['Angular', ' TypeScript', ' HTML', ' SCSS', ' Firebase'],
-      github: 'https://github.com/DanielaScholz/',
-      liveTest: 'http://daniela-scholz.at/projects/',
+      github: 'https://github.com/DanielaScholz/simple-crm',
+      liveTest: 'https://crm.daniela-scholz.at/simple-crm/',
     },
     {
       id: 4,
@@ -48,7 +48,7 @@ export class PortfolioComponent implements OnInit {
       description: 'Based on the PokéAPI a simple library that provides and catalogues pokemon information.',
       category: ['JavaScript', ' HTML', ' CSS', ' API'],
       github: 'https://github.com/DanielaScholz/pokedex',
-      liveTest: 'http://daniela-scholz.at/projects/pokedex/',
+      liveTest: 'https://daniela-scholz.at/projects/pokedex/',
     }
   ]
 

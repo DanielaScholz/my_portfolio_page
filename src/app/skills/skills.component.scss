@@ -126,10 +126,16 @@ fieldset {
 }
 
 
-@media (max-width: 420px) {
+@media (max-width: 480px) {
   fieldset {
     .skills-container {
       margin: 25px 25px;
+
+      div {
+        span {
+          white-space: unset;
+        }
+      }
     }
   }
 }

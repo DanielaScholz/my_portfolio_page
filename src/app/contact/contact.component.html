@@ -3,66 +3,6 @@
   <div class="d-flex-column-center">
     <h5>Want to discuss a new project?</h5>
     <span>Get in touch with me and make it happen!</span>
-
-    <!-- <form #contactForm (ngSubmit)="checkInput()" ngNativeValidate class="d-flex-column-center">
-
-            <div class="fieldholder">
-                <input #nameField type="text" id="name" placeholder="Your name" >
-                <label for="name">Your name</label>
-            </div>
-
-            <div [class.empty-input]="nameError" class="empty-input">Your name is required</div>
-
-            <div class="fieldholder">
-                <input #emailField type="email" id="email" placeholder="Your email" >
-                <label for="email">Your email</label>
-            </div>
-
-            <div [class.empty-input]="emailError" class="empty-input">Your email is required</div>
-
-            <div class="fieldholder">
-                <textarea #messageField name="message" placeholder="Your message" ></textarea>
-                <label for="message">Your message</label>
-            </div>
-
-            <div [class.empty-input]="messageError">Your message is empty</div>
-
-            <button #sendBtn type="submit" class="btn-style btn-black">Send message</button> 
-        </form> -->
-
-
-
-    <!-- <form #contactForm (ngSubmit)="submitForm()" ngNativeValidate class="d-flex-column-center">
-
-            <div class="fieldholder">
-                <input #nameField matInput
-                [formControl]="nameFormControl"
-                [errorStateMatcher]="matcher"
-                type="text" id="name" placeholder="Your name" >
-                <label for="name">Your name</label>
-            </div>
-            <mat-error *ngIf="nameFormControl.hasError('required')">
-              Name is <strong>required</strong>
-            </mat-error>
-
-
-
-            <div class="fieldholder">
-                <input #emailField type="email" id="email" placeholder="Your email" >
-                <label for="email">Your email</label>
-            </div>
-
-
-            <div class="fieldholder">
-                <textarea #messageField name="message" placeholder="Your message" ></textarea>
-                <label for="message">Your message</label>
-            </div>
-
-            <button #sendBtn type="submit" class="btn-style btn-black">Send message</button> 
-        </form>  -->
-
-
-
     <form style="width: 100%;" #contactForm (ngSubmit)="submitForm()" ngNativeValidate class="d-flex-column-center">
       <mat-form-field appearance="outline">
         <mat-label>Your name</mat-label>
@@ -104,7 +44,4 @@
   <div class="position">
     <div #submitMsg class="submitMsg hide">Alert</div>
   </div>
-
-
-
 </section>

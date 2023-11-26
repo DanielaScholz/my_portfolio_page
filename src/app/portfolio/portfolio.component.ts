@@ -48,7 +48,7 @@ export class PortfolioComponent implements OnInit {
       description: 'Based on the PokéAPI a simple library that provides and catalogues pokemon information.',
       category: ['JavaScript', ' HTML', ' CSS', ' API'],
       github: 'https://github.com/DanielaScholz/pokedex',
-      liveTest: 'https://daniela-scholz.at/projects/pokedex/',
+      liveTest: 'https://daniela-scholz.at/projects/pokedex/src/intro/intro.html',
     }
   ]
 

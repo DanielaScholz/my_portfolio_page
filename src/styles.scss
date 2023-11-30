@@ -8,9 +8,12 @@ body {
      font-size: 23px;
      font-weight: 400;
      background-color: #FFFCF3;
-
      overflow-x: hidden;
 }
+
+.overflow-hidden{
+     overflow-y: hidden;
+ }
 
 html {
      scroll-behavior: smooth;

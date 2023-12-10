@@ -1,48 +1,54 @@
-<nav #desktopNav *ngIf="isDesktop">
-    <img routerLink="/" src="assets/img/logo/logo-black.png" alt="personal logo">
-    <div>
-        <a href="#about-me">About me</a>
-        <a href="#skills">Skills</a>
-        <a href="#portfolio">My work</a>
-        <a href="#contact">Contact</a>
-    </div>
-</nav>
+<ng-container *ngIf="isDesktop; then desktopNav; else mobileNav"></ng-container>
 
-<nav #mobileNav class="mobile-nav" *ngIf="!isDesktop" [class.mobile-100vh]="toggleMenu">
-    <div>
+<ng-template #desktopNav>
+    <nav>
         <img routerLink="/" src="assets/img/logo/logo-black.png" alt="personal logo">
-        <div (click)="toggleMobileMenu()" class="burger-menu">
-            <svg width="40" height="32" viewBox="0 0 40 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect [class.top]="toggleMenu" x="0" y="0" width="40" height="4" fill="#000" />
-                <rect [class.middle]="toggleMenu" x="0" y="14" width="40" height="4" fill="#000" />
-                <rect [class.bottom]="toggleMenu" x="0" y="28" width="40" height="4" fill="#000" />
-            </svg>
+        <div>
+            <a href="#about-me">About me</a>
+            <a href="#skills">Skills</a>
+            <a href="#portfolio">My work</a>
+            <a href="#contact">Contact</a>
         </div>
-    </div>
+    </nav>
+</ng-template>
 
-    <div class="mobile-links" *ngIf="toggleMenu">
-        <a href="#about-me" (click)="closeMobileMenu()">
-            <div>About me</div>
-        </a>
-        <a href="#skills" (click)="closeMobileMenu()">
-            <div>My skills</div>
-        </a>
-        <a href="#portfolio" (click)="closeMobileMenu()">
-            <div>Portfolio</div>
-        </a>
-        <a href="#contact" (click)="closeMobileMenu()">
-            <div>Contact</div>
-        </a>
-    </div>
-
-    <div class="mobile-footer" *ngIf="toggleMenu">
-        <h3 id="contact" class="light-on-dark">Say hi!</h3>
-        <span>daniela.scholz93@gmail.com</span>
-        <div class="icons-box">
-            <a href="https://github.com/DanielaScholz" target="_blank"><img src="assets/img/footer/Github.svg"
-                    alt="Github icon"></a>
-            <a href="https://linkedin.com/in/daniela-scholz-369743281" target="_blank"><img
-                    src="assets/img/footer/Linkedin.svg" alt="Linkedin icon"></a>
+<ng-template #mobileNav>
+    <nav class="mobile-nav" [class.mobile-100vh]="toggleMenu">
+        <div>
+            <img routerLink="/" src="assets/img/logo/logo-black.png" alt="personal logo">
+            <div (click)="toggleMobileMenu()" class="burger-menu">
+                <svg width="40" height="32" viewBox="0 0 40 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect [class.top]="toggleMenu" x="0" y="0" width="40" height="4" fill="#000" />
+                    <rect [class.middle]="toggleMenu" x="0" y="14" width="40" height="4" fill="#000" />
+                    <rect [class.bottom]="toggleMenu" x="0" y="28" width="40" height="4" fill="#000" />
+                </svg>
+            </div>
         </div>
-    </div>
-</nav>
+
+        <div class="mobile-links" *ngIf="toggleMenu">
+            <a href="#about-me" (click)="closeMobileMenu()">
+                <div>About me</div>
+            </a>
+            <a href="#skills" (click)="closeMobileMenu()">
+                <div>My skills</div>
+            </a>
+            <a href="#portfolio" (click)="closeMobileMenu()">
+                <div>Portfolio</div>
+            </a>
+            <a href="#contact" (click)="closeMobileMenu()">
+                <div>Contact</div>
+            </a>
+        </div>
+
+        <div class="mobile-footer" *ngIf="toggleMenu">
+            <h3 id="contact" class="light-on-dark">Say hi!</h3>
+            <span>daniela.scholz93@gmail.com</span>
+            <div class="icons-box">
+                <a href="https://github.com/DanielaScholz" target="_blank"><img src="assets/img/footer/Github.svg"
+                        alt="Github icon"></a>
+                <a href="https://linkedin.com/in/daniela-scholz-369743281" target="_blank"><img
+                        src="assets/img/footer/Linkedin.svg" alt="Linkedin icon"></a>
+            </div>
+        </div>
+    </nav>
+</ng-template>

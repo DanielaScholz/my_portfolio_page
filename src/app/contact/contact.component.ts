@@ -47,7 +47,7 @@ export class ContactComponent {
     fd.append('message', message.value);
 
     try {
-      const response = await fetch('https://daniela-scholz.at/send_mail/send_mail.php', {
+      const response = await fetch('https://portfolio.daniela-scholz.at/send_mail/send_mail.php', {
         method: 'POST',
         body: fd
       });

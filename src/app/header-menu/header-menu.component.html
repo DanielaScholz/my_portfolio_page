@@ -1,7 +1,6 @@
-<ng-container *ngIf="isDesktop; then desktopNav; else mobileNav"></ng-container>
+<!-- <ng-container *ngIf="isDesktop; then desktopNav; else mobileNav"></ng-container> -->
 
-<ng-template #desktopNav>
-    <nav>
+    <nav #desktopNav *ngIf="isDesktop">
         <img routerLink="/" src="assets/img/logo/logo-black.png" alt="personal logo">
         <div>
             <a href="#about-me">About me</a>
@@ -10,10 +9,8 @@
             <a href="#contact">Contact</a>
         </div>
     </nav>
-</ng-template>
 
-<ng-template #mobileNav>
-    <nav class="mobile-nav" [class.mobile-100vh]="toggleMenu">
+    <nav #mobileNav class="mobile-nav" *ngIf="!isDesktop" [class.mobile-100vh]="toggleMenu">
         <div>
             <img routerLink="/" src="assets/img/logo/logo-black.png" alt="personal logo">
             <div (click)="toggleMobileMenu()" class="burger-menu">
@@ -51,4 +48,3 @@
             </div>
         </div>
     </nav>
-</ng-template>

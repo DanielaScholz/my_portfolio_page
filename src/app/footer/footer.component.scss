@@ -1,6 +1,8 @@
+@import '../../styles.scss';
+
 footer {
     background-color: black;
-    color: #FFFCF3;
+    color: $cream;
     padding-bottom: 70px;
     margin-top: -1px;
 
@@ -15,9 +17,7 @@ footer {
     }
 
     .middle-box {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        @include flex($justify: space-between, $align: center);
 
         .icons-box {
             a {
@@ -27,13 +27,11 @@ footer {
     }
 
     .legal-box {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
+        @include flex($justify: flex-end, $align: center);
 
         a {
             position: relative;
-            color: #FFFCF3;
+            color: $cream;
             font-size: 16px;
 
             &:hover {
@@ -47,7 +45,7 @@ footer {
                 left: 0;
                 width: 0;
                 height: 2px;
-                background-color: #5988FF;
+                background-color: $blue;
                 transition: width 125ms ease-in-out;
             }
 
@@ -69,8 +67,7 @@ footer {
 @media (max-width: 900px) {
     footer {
         .logo-box {
-            align-items: center;
-            justify-content: center;
+            @include flex($justify: center, $align: center);
             padding-bottom: 25px;
         }
 
@@ -83,8 +80,8 @@ footer {
             }
 
             .icons-box {
-                display: flex;
-                align-items: center;
+                @include flex($align: center);
+
 
                 a {
                     margin-right: 25px;

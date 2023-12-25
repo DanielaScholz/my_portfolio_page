@@ -1,6 +1,8 @@
+@import '../../styles.scss';
+
 h1{
     font-size: 30px;
-    color: #5988FF;
+    color: $blue;
     margin: revert;
     word-wrap: break-word;
 }

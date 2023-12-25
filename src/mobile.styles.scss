@@ -24,6 +24,13 @@
     }
 }
 
+@media (min-width: 2000px) {
+    .margin-ri-le {
+        margin-right: 250px;
+        margin-left: 250px;
+    } 
+}
+
 @media (max-width: 900px) {
     .margin-ri-le {
         margin-right: 75px;

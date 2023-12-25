@@ -1,3 +1,5 @@
+@import '../../styles.scss';
+
 fieldset {
   border: 4px solid black;
 
@@ -6,16 +8,12 @@ fieldset {
   }
 
   .skills-container {
-    margin: 100px 60px;
-    display: flex;
+    @include flex($justify:space-evenly);
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    margin: 100px 60px;    
 
     div {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      @include flex($direction:column, $justify:center, $align: center);
       flex-basis: 15%;
       margin: 15px;
       text-align: center;
@@ -24,7 +22,7 @@ fieldset {
       transition: color 225ms ease-in-out;
 
       &:hover {
-        color: #5988FF;
+        color: $blue;
       }
 
       img {

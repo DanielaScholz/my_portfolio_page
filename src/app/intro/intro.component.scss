@@ -1,15 +1,12 @@
+@import '../../styles.scss';
+
 header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include flex($direction:column, $justify:center, $align:center);
     margin-top: 170px;
 }
 
 .name-box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex($justify:center, $align:center);
     width: 100%;
 }
 
@@ -22,13 +19,12 @@ header {
     font-family: 'Overpass';
     font-weight: 700;
     font-size: 48px;
-    color: #5988FF;
+    color: $blue;
     padding-left: 12px;
 }
 
 .info-box {
-    display: flex;
-    justify-content: space-between;
+    @include flex($justify: space-between);
     margin-top: 100px;
     font-weight: 300;
 }

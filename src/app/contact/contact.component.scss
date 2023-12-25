@@ -1,3 +1,6 @@
+@import '../../styles.scss';
+
+
 section {
     position: relative;
     width: 100%;
@@ -17,15 +20,13 @@ section {
     }
 
     .position {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include flex($justify: center, $align: center)
     }
 
     .submitMsg {
         position: absolute;
         top: 50%;
-        background: #5988FF;
+        background: $blue;
         color: white;
         padding: 10px;
         border: 4px solid white;
@@ -49,25 +50,25 @@ mat-form-field {
 
 //changes color of placeholder
 ::ng-deep .mdc-text-field:not(.mdc-text-field-disabled) .mdc-floating-label {
-    color: #FFFCF3;
+    color: $cream;
     font-family: 'Overpass';
     font-size: 16px;
 }
 
 //changes mat input value color
 ::ng-deep .mdc-text-field:not(.mdc-text--field-disabled) .mdc-text-field__input {
-    color: #FFFCF3;
+    color: $cream;
     font-family: 'Overpass';
     font-size: 16px;
 }
 
 //changes caret-color
 ::ng-deep .mdc-text-field .mdc-text-field__input {
-    caret-color: #FFFCF3;
+    caret-color: $cream;
 }
 
 ::ng-deep .mdc-notched-outline {
-    border: 2px solid #FFFCF3;
+    border: 2px solid $cream;
     // border: 2px solid #FFFCF3 !important;
 }
 
@@ -75,6 +76,11 @@ mat-form-field {
     background-color: black;
 }
 
+@media (min-width: 2000px) {
+    section{
+        padding: 120px 250px 0px 250px;
+    }
+}
 
 @media (max-width: 900px) {
     mat-form-field {

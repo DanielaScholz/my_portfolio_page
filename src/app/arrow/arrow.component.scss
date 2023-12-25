@@ -1,14 +1,12 @@
+@import '../../styles.scss';
+
 section {
     .arrow-position-left {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
+        @include flex($justify: flex-end, $align: center);
     }
 
     .arrow-position-right {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
+        @include flex($justify: flex-start, $align: center);
     }
 
     .move-left {

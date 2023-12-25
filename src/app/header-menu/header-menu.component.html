@@ -9,9 +9,9 @@
     </nav>
 
     <nav #mobileNav class="mobile-nav" *ngIf="!isDesktop" [class.mobile-100vh]="toggleMenu">
-        <div>
+        <div class="nav-icons">
             <img routerLink="/" src="assets/img/logo/logo-black.png" alt="personal logo">
-            <div (click)="toggleMobileMenu()" class="burger-menu">
+            <div (click)="toggleMobileMenu()">
                 <svg width="40" height="32" viewBox="0 0 40 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect [class.top]="toggleMenu" x="0" y="0" width="40" height="4" fill="#000" />
                     <rect [class.middle]="toggleMenu" x="0" y="14" width="40" height="4" fill="#000" />

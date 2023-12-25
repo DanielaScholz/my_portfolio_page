@@ -1,15 +1,14 @@
+@import '../../styles.scss';
+
 #about-me {
     margin-bottom: 50px;
 }
 
 article {
-    display: flex;
-    justify-content: space-between;
+    @include flex($justify: space-between);
 
     section {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include flex($direction: column, $align: center);
         width: 610px;
         margin-right: 50px;
 
@@ -22,9 +21,7 @@ article {
 
         a {
             width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            @include flex($justify: center, $align: center);
         }
     }
 }
@@ -72,8 +69,7 @@ article {
     }
 
     article {
-        flex-direction: column-reverse;
-        align-items: center;
+        @include flex($direction: column-reverse, $align: center);
 
         section {
             margin-right: unset;
